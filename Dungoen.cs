@@ -1,4 +1,5 @@
-﻿using Project_5___Zork;
+using Project_5;
+using Project_5___Zork;
 using System;
 //Laura
 
@@ -18,19 +19,19 @@ public class Dungeon
     //constructor should generate how many cells/rooms are in the Dungeon array/list
 
     public Dungeon()
-	{
+    {
         //adding the starting room
         Room starterRoom = new Room(P, M, W);
         DungeonList.Add(starterRoom);
 
         Random r = new Random();
         int numberOfRooms = r.Next(5, 10);
-        
+
         for (int i = 1; i < numberOfRooms; i++)
         {
             Room room = new Room();
             DungeonList.Add(room);
-        } 
+        }
     }
 
     public override string ToString()
@@ -41,7 +42,7 @@ public class Dungeon
 
         for (int i = 0; i < DungeonList.Count; i++)
         {
-            display += DungeonList[i];      
+            display += DungeonList[i];
         }
         return display;
     }
@@ -52,40 +53,18 @@ public class Dungeon
     //access to player and all the cells, movement might be in dungeon
     public void PlayerMovement(string direction)
     {
-        // if 
 
-        P.GetPosition();
-
-        //var tempPlayer = new Participant();
-
-        //tempPlayer.SetHealth(tempPlayer.GetHealth());
-       // tempPlayer.SetDamage(tempPlayer.GetDamage());
-       // tempPlayer.SetPosition(tempPlayer.GetPosition());
-       // tempPlayer.SetAccuracy(tempPlayer.GetAccuracy());
-
-        if (direction == "noMove")
+        if (direction == "EAST")
         {
-            return;
+            Console.WriteLine($"The players position before going {direction} is the room at index{P.GetPosition()}");
+            P.SetPosition(P.GetPosition() + 1);
+            Console.WriteLine($"The players position after going {direction} is the room at index{P.GetPosition()}");
         }
-        else if (direction == "east")
+        else if (direction == "WEST")
         {
-            for (int i = 0; i < DungeonList.Count; i++)
-            {
-                P.SetPosition(i);
-                return;
-            }
-        }
-        else if (direction == "west")
-        {
-            for (int i = 0; i < DungeonList.Count; i--)
-            {
-                P.SetPosition(i);
-                return;
-            }
+            Console.WriteLine($"The players position before going {direction} is the room at index{P.GetPosition()}");
+            P.SetPosition(P.GetPosition() - 1);
+            Console.WriteLine($"The players position after going {direction} is the room at index{P.GetPosition()}");
         }
     }
 }
-
-
-
-

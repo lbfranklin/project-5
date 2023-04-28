@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project 5 - Zork", "Project 5 - Zork.csproj", "{0937A1D7-16A8-4C40-8D41-E660A8E14B26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C668D9B-B82F-4732-BEBC-48B93699DEEB}"
+	ProjectSection(SolutionItems) = preProject
+		Cell.cs = Cell.cs
+		Dungoen.cs = Dungoen.cs
+		Monster.cs = Monster.cs
+		Person.cs = Person.cs
+		Weapon.cs = Weapon.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0937A1D7-16A8-4C40-8D41-E660A8E14B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0937A1D7-16A8-4C40-8D41-E660A8E14B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0937A1D7-16A8-4C40-8D41-E660A8E14B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0937A1D7-16A8-4C40-8D41-E660A8E14B26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EB9B6F0-50B7-4CFD-B38B-B43E1102F984}
+	EndGlobalSection
+EndGlobal

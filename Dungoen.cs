@@ -51,20 +51,43 @@ public class Dungeon
     //direction - go east or west through the list/array
 
     //access to player and all the cells, movement might be in dungeon
-    public void PlayerMovement(string direction)
+    public void PlayerMovement(string direction, Player P)
     {
+        // if 
+
+
+        //var tempPlayer = new Participant();
+
+        //tempPlayer.SetHealth(tempPlayer.GetHealth());
+        // tempPlayer.SetDamage(tempPlayer.GetDamage());
+        // tempPlayer.SetPosition(tempPlayer.GetPosition());
+        // tempPlayer.SetAccuracy(tempPlayer.GetAccuracy());
+        //switch (direction)
+        // {
+        //     case "EAST":
+        //         Console.WriteLine(P.GetPosition());
+        //         P.SetPosition(P.GetPosition() + 1);
+        //         Console.WriteLine(P.GetPosition());
+        //         break;
+        //     case "WEST":
+        //         Console.WriteLine(P.GetPosition());
+        //         P.SetPosition(P.GetPosition() - 1);
+        //         break;
+        // }
 
         if (direction == "EAST")
         {
-            Console.WriteLine($"The players position before going {direction} is the room at index{P.GetPosition()}");
+            DungeonList[P.GetPosition()].SetPlayerPosition(false);
+            Console.WriteLine(P.GetPosition());
             P.SetPosition(P.GetPosition() + 1);
-            Console.WriteLine($"The players position after going {direction} is the room at index{P.GetPosition()}");
+            Console.WriteLine(P.GetPosition());
+            DungeonList[P.GetPosition()].SetPlayerPosition(true);
         }
         else if (direction == "WEST")
         {
-            Console.WriteLine($"The players position before going {direction} is the room at index{P.GetPosition()}");
+            Console.WriteLine(P.GetPosition());
             P.SetPosition(P.GetPosition() - 1);
-            Console.WriteLine($"The players position after going {direction} is the room at index{P.GetPosition()}");
+            Console.WriteLine(P.GetPosition());
         }
     }
 }

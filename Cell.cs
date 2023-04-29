@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class Room
 {
@@ -7,7 +7,7 @@ public class Room
     //fields
     bool chanceOfMonster;
     bool chanceOfWeapon;
-    bool playerPosition;
+    bool playerPosition { get; set; }
 
     Player P;
     Monster M;
@@ -117,6 +117,10 @@ public class Room
         }
 
         return display;
+    }
+    public void SetPlayerPosition(bool playerPosition)
+    {
+        this.playerPosition = playerPosition;
     }
 
 }
